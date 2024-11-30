@@ -8,6 +8,9 @@
 
    GET EXAMPLE FROM
    https://github.com/GyverLibs/FastBot/blob/main/src/FastBot.h
+
+   addition materials:
+   https://habr.com/ru/companies/epam_systems/articles/522730/
 */
 #include <string.h>
 #include "freertos/FreeRTOS.h"
