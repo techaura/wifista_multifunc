@@ -1,4 +1,4 @@
-# Install script for directory: C:/dev/esp/wifista_multifunc/main
+# Install script for directory: C:/dev/esp/workspace/wifista_multifunc/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

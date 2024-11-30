@@ -1,5 +1,5 @@
-#define ESP_STA_NAME "Steppefort_example"
-#define WIFI_SSID "login"
-#define WIFI_PASS "pass"
+#define PLATFORM_ESP_STA_NAME "Steppefort_example"
+#define PLATFORM_WIFI_SSID "Mobile WiFi-JGge8S"
+#define PLATFORM_WIFI_PASS "58168745"
 
 

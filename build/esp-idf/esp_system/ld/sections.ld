@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: C:\dev\esp\wifista_multifunc\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\dev\esp\workspace\wifista_multifunc\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

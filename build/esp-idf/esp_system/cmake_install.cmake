@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/dev/esp/wifista_multifunc/build/esp-idf/esp_system/port/cmake_install.cmake")
+  include("C:/dev/esp/workspace/wifista_multifunc/build/esp-idf/esp_system/port/cmake_install.cmake")
 endif()
 
