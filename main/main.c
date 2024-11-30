@@ -27,6 +27,8 @@
 
 #include "platform.h"
 #include "connection.h"
+#include "../specific_modules/adc_tools.h"
+
 
 static const char *TAG = "Steppefort";
 
@@ -44,4 +46,17 @@ void app_main(void)
 
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
+
+    adctools_init();
+
+    xTaskCreatePinnedToCore(
+        adc_task,           // Указатель на функцию задачи
+        "ADC Task",         // Имя задачи
+        2048,               // Размер стека в байтах
+        NULL,               // Параметры задачи
+        5,                  // Приоритет задачи
+        NULL,               // Дескриптор задачи
+        1                   // Ядро (0 - Core 0, 1 - Core 1)
+    );
+
 }

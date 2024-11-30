@@ -1,9 +1,9 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
-#define PLATFORM_ESP_STA_NAME "Steppefort_example"
-#define PLATFORM_WIFI_SSID "defaultAP"
-#define PLATFORM_WIFI_PASS "12345678"
+#define PLATFORM_WIFI_SSID "Dwarf-2.4G"
+#define PLATFORM_WIFI_PASS "58168745"
+#define PLATFORM_CUSTOM_HOSTNAME "SteppefortESP32_STA" //name of device wit
 #define PLATFORM_STA_MAXIMUM_RETRY 5
 
 /* The event group allows multiple bits for each event, but we only care about two events:

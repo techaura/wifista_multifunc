@@ -56,7 +56,10 @@ void wifi_init_sta(void)
     ESP_ERROR_CHECK(esp_netif_init());
 
     ESP_ERROR_CHECK(esp_event_loop_create_default());
-    esp_netif_create_default_wifi_sta();
+
+    /*Set the custom hostname*/
+    esp_netif_t *sta_netif = esp_netif_create_default_wifi_sta();
+    ESP_ERROR_CHECK(esp_netif_set_hostname(sta_netif, PLATFORM_CUSTOM_HOSTNAME));
 
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_LOGI(TAG, "esp_wifi_init(&cfg) - go");

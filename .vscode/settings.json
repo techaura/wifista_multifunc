@@ -18,6 +18,7 @@
     "files.associations": {
         "freertos.h": "c",
         "string.h": "c",
-        "connection.h": "c"
+        "connection.h": "c",
+        "adc_tools.h": "c"
     }
 }
