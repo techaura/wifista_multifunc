@@ -1,3 +1,5 @@
+#pragma once
+#include <string.h>
 /*
 Primitive file types typical for instant messengers are listed
 */
@@ -12,5 +14,6 @@ enum FileTypes{
 };
 
 struct Telegram_msg{
-    String& userID;
-}
+    //unsigned char& UserID;
+    String
+};
