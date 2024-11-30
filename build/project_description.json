@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "wifista",
-    "project_version":    "5ceea3c-dirty",
+    "project_version":    "47a2d9b-dirty",
     "project_path":       "C:/dev/esp/wifista_multifunc",
     "idf_path":           "C:/dev/esp/v5.3/esp-idf",
     "build_dir":          "C:/dev/esp/wifista_multifunc/build",
@@ -1165,7 +1165,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "C:/dev/esp/wifista_multifunc/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/dev/esp/wifista_multifunc/main/station_example_main.c" ],
+            "sources": [ "C:/dev/esp/wifista_multifunc/main/main.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
