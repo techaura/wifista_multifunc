@@ -28,7 +28,7 @@
 #include "platform.h"
 #include "connection.h"
 #include "../specific_modules/adc_tools.h"
-
+#include "../specific_modules/messengers_datatypes.h"
 
 static const char *TAG = "Steppefort";
 
@@ -36,6 +36,8 @@ static const char *TAG = "Steppefort";
 
 void app_main(void)
 {
+    Bot bot;
+    init_bot(&bot, "tokentoken");
     //Initialize NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -48,7 +50,7 @@ void app_main(void)
     wifi_init_sta();
 
     adctools_init();
-
+/*
     xTaskCreatePinnedToCore(
         adc_task,           // Указатель на функцию задачи
         "ADC Task",         // Имя задачи
@@ -58,5 +60,5 @@ void app_main(void)
         NULL,               // Дескриптор задачи
         1                   // Ядро (0 - Core 0, 1 - Core 1)
     );
-
+*/
 }

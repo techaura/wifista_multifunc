@@ -1,7 +1,12 @@
+/***************************Steppefort Labs 2024**********************************
+The pair of files connection.c/.h stores everything related to the Wi-Fi connection.
+Unlike the sample projects from ESP-IDF this part does not flood up main.c
+I would like to thank Espressif for their samples and GPT chat for his advice :)
+connection.h*/
 #ifndef CONNECTION_H
 #define CONNECTION_H
 
-#define PLATFORM_WIFI_SSID "Dwarf-2.4G"
+#define PLATFORM_WIFI_SSID "Dwarf-2.4G"//"JGge8S_Mobile"
 #define PLATFORM_WIFI_PASS "58168745"
 #define PLATFORM_CUSTOM_HOSTNAME "SteppefortESP32_STA" //name of device wit
 #define PLATFORM_STA_MAXIMUM_RETRY 5

@@ -1,3 +1,8 @@
+/***************************Steppefort Labs 2024**********************************
+The pair of files connection.c/.h stores everything related to the Wi-Fi connection.
+Unlike the sample projects from ESP-IDF this part does not flood up main.c
+I would like to thank Espressif for their samples and GPT chat for his advice :)
+connection.c*/
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -32,17 +37,42 @@ static void event_handler(void* arg, esp_event_base_t event_base,
         esp_wifi_connect();
     } 
     else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
+        wifi_event_sta_disconnected_t* event = (wifi_event_sta_disconnected_t*) event_data;
+
+        // Логирование причины отключения
+        ESP_LOGW(TAG, "Disconnected from AP, reason: %d", event->reason);
+
+        switch (event->reason) {
+            case WIFI_REASON_AUTH_FAIL:
+                ESP_LOGE(TAG, "Authentication failed: Check your SSID or password");
+                break;
+            case WIFI_REASON_NO_AP_FOUND:
+                ESP_LOGE(TAG, "AP not found: Check if the AP is online and in range");
+                break;
+            case WIFI_REASON_ASSOC_FAIL:
+                ESP_LOGE(TAG, "Association with AP failed");
+                break;
+            case WIFI_REASON_HANDSHAKE_TIMEOUT:
+                ESP_LOGE(TAG, "Handshake timeout: Check security settings (WPA/WPA2)");
+                break;
+            default:
+                ESP_LOGW(TAG, "Disconnected for unknown reason: %d", event->reason);
+                break;
+        }
+
+        // Логика переподключения
         if (s_retry_num < PLATFORM_STA_MAXIMUM_RETRY) {
             esp_wifi_connect();
             s_retry_num++;
-            ESP_LOGI(TAG, "retry to connect to the AP");
+            ESP_LOGI(TAG, "Retrying to connect to the AP (%d/%d)", s_retry_num, PLATFORM_STA_MAXIMUM_RETRY);
         } else {
             xEventGroupSetBits(s_wifi_event_group, WIFI_FAIL_BIT);
+            ESP_LOGE(TAG, "Maximum retry attempts reached. Failed to connect.");
         }
-        ESP_LOGI(TAG,"connect to the AP fail");
-    } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
+    } 
+    else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t* event = (ip_event_got_ip_t*) event_data;
-        ESP_LOGI(TAG, "got ip:" IPSTR, IP2STR(&event->ip_info.ip));
+        ESP_LOGI(TAG, "Got IP address: " IPSTR, IP2STR(&event->ip_info.ip));
         s_retry_num = 0;
         xEventGroupSetBits(s_wifi_event_group, WIFI_CONNECTED_BIT);
     }

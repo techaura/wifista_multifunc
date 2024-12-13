@@ -618,7 +618,6 @@ C:/dev/esp/wifista_multifunc/build/esp-idf/esp_driver_ppa/CMakeFiles/list_instal
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_driver_ppa/CMakeFiles/install.dir
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_driver_ppa/CMakeFiles/install/local.dir
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_driver_ppa/CMakeFiles/install/strip.dir
-C:/dev/esp/wifista_multifunc/build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_eth/CMakeFiles/edit_cache.dir
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_eth/CMakeFiles/rebuild_cache.dir
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_eth/CMakeFiles/list_install_components.dir

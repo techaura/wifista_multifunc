@@ -19,6 +19,8 @@
         "freertos.h": "c",
         "string.h": "c",
         "connection.h": "c",
-        "adc_tools.h": "c"
+        "adc_tools.h": "c",
+        "platform.h": "c",
+        "messengers_datatypes.h": "c"
     }
 }

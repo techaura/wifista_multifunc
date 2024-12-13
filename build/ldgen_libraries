@@ -55,7 +55,6 @@ C:/dev/esp/wifista_multifunc/build/esp-idf/http_parser/libhttp_parser.a
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp-tls/libesp-tls.a
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_adc/libesp_adc.a
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_driver_cam/libesp_driver_cam.a
-C:/dev/esp/wifista_multifunc/build/esp-idf/esp_eth/libesp_eth.a
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_gdbstub/libesp_gdbstub.a
 C:/dev/esp/wifista_multifunc/build/esp-idf/esp_hid/libesp_hid.a
 C:/dev/esp/wifista_multifunc/build/esp-idf/tcp_transport/libtcp_transport.a
